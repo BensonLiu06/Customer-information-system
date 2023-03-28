@@ -22,6 +22,7 @@ def printMenu():
     This function may also be broken down further depending on your algorithm/approach
 '''
 def enterCustomerInfo():
+    print("Enter first name")
     pass    # Remove this pass statement and add your own code below
 
 '''

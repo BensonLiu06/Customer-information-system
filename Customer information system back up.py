@@ -85,6 +85,8 @@ def validatePostalCode(postalCode): #determines whether the postal code is valid
     This function may also be broken down further depending on your algorithm/approach
 '''
 def validateCreditCard(creditCard): #determines whether the credit card is valid
+
+    
     count=1
     reverseNum= (str(creditCard) [::-1])
     sumofOddNumbers=0 
@@ -134,13 +136,26 @@ def validateCreditCard(creditCard): #determines whether the credit card is valid
     
                      
 
-    '''
+'''
     This function is to be edited to achieve the task.
     It is your decision to make this function a procedural or functional type
     You may place as many or as few parameters as needed
     This function may also be broken down further depending on your algorithm/approach
-    '''
+'''
 def generateCustomerDataFile(): #generates a file with the user's information and their unique ID code    
+        
+    
+
+    output_file = input("enter output file name: ")
+    filePath = input("Enter a file path: ")
+    fileName = output_file + ".csv"
+    fileCreate = filePath + fileName
+
+    with open('CustomerData.csv','r') as firstfile, open(fileCreate,'a') as secondfile:
+        # read content from first file
+        for line in firstfile:
+            # append content to second file
+            secondfile.write(line)
     
 
 
@@ -157,7 +172,6 @@ def generateCustomerDataFile(): #generates a file with the user's information an
 ####################################################################
 
 # Do not edit any of these variables
-
 userInput = ""
 enterCustomerOption = "1"
 generateCustomerOption = "2"
